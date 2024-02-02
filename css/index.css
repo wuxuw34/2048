@@ -1,0 +1,153 @@
+*{
+    text-wrap: nowrap;
+    text-align: center;
+}
+body{
+    background-color: rgb(250, 248, 239);
+    position: relative;
+}
+.game_2048{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px 0px;
+    margin: auto;
+}
+
+.game_2048 #game{
+    
+}
+.header_2048 {
+    display: flex;
+    flex-direction: row;align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+.title{
+    font-size: 62px;
+    font-weight: bold;
+    color: rgb(143, 122, 102);
+    padding: 5px 20px;
+}
+
+.header_2048 .opreate{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+button,.button{
+    border-radius: 5px;
+    width: 100%;
+    height: 42px;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    cursor:pointer;
+    padding: 5px 8px;
+}
+
+.button1{
+    background-color: rgb(143, 122, 102);
+    color: white;
+    font-size: 24px;
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.score_class{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(187, 173, 160);
+    padding: 5px 30px;
+}
+
+.score_class>span:nth-child(1){
+    font-size: 12px;
+    color: rgb(238, 228, 216);
+}
+.score_class>span:nth-child(2){
+    font-size: 20px;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+
+.content{
+    position: absolute;
+    right: 0;
+    top:0;
+    background-color: rgb(250, 248, 239);
+    height: 100%;
+    min-width: 200px;
+    background-color: white;
+    z-index: 100;
+    width: 30%;
+    padding: 5px 10px;
+    translate: 100%;
+    transition: all 0.2s ;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 0 19px 3px rgba(0,0,0,0.1);
+}
+.sider{
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left:0;
+    z-index: 100;
+    transition: all 0.2s ;
+    visibility: hidden;
+}
+.sider::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.1);
+}
+header{
+    display: flex;
+    justify-content: end;
+}
+header svg{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.content .setting_title{
+    /* text-align: left; */
+}
+
+.content form{
+    display: table;
+    text-align: left;
+    vertical-align: middle;
+    border-spacing: 10px 20px;
+
+}
+
+.content form div{
+    display: table-row;
+}
+.content form div>*{
+    display: table-cell;
+    text-align: left;
+}
+.content form div>*:not(label){
+    width: 150px;
+}

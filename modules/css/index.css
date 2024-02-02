@@ -1,0 +1,90 @@
+.game{
+    position: relative;
+    /* height: 500px; */
+}
+.grid{
+    display: grid;
+    height: 400px;
+    width: 400px;
+    gap:8px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(187, 173, 160);
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    z-index: 1;
+}
+
+.grid-item{
+    background-color: rgb(205, 193, 180);
+    border-radius: 3px;
+    aspect-ratio: 1/1;
+    /* position: relative; */
+    z-index: 1;
+}
+
+.container{
+    z-index: 2;
+    position: relative;
+}
+.tile{
+    border-radius: 3px;
+    transition: all 0.2s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: bolder;
+    position: absolute;
+    z-index: 10;
+    /* isolation: isolate; */
+}
+
+.tile-new{
+    animation: appear 200ms 100ms;
+    animation-fill-mode: backwards;
+}
+
+.tile-position{
+    translate: 0 0 !important;
+}
+
+.tile-merged{
+    animation: merged 0.2s 100ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes merged {
+    from{
+        opacity: 0;
+        transform: scale(1);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#show #show1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#show div,#show1 div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
